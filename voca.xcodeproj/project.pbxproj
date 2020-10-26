@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		35DB7AD22543780A00B3446A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7AD12543780A00B3446A /* main.cpp */; };
+		35DB7ADC25444F9300B3446A /* declaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7ADA25444F9300B3446A /* declaration.cpp */; };
+		35DB7AE0254461E800B3446A /* handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7ADE254461E800B3446A /* handler.cpp */; };
+		35DB7AE42544640F00B3446A /* file_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7AE22544640F00B3446A /* file_handler.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		35DB7ACE2543780A00B3446A /* voca */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = voca; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DB7AD12543780A00B3446A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		35DB7ADA25444F9300B3446A /* declaration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = declaration.cpp; sourceTree = "<group>"; };
+		35DB7ADB25444F9300B3446A /* declaration.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = declaration.hpp; sourceTree = "<group>"; };
+		35DB7ADE254461E800B3446A /* handler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = handler.cpp; sourceTree = "<group>"; };
+		35DB7ADF254461E800B3446A /* handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = handler.hpp; sourceTree = "<group>"; };
+		35DB7AE22544640F00B3446A /* file_handler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_handler.cpp; sourceTree = "<group>"; };
+		35DB7AE32544640F00B3446A /* file_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = file_handler.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				35DB7AD12543780A00B3446A /* main.cpp */,
+				35DB7ADE254461E800B3446A /* handler.cpp */,
+				35DB7ADF254461E800B3446A /* handler.hpp */,
+				35DB7AE22544640F00B3446A /* file_handler.cpp */,
+				35DB7AE32544640F00B3446A /* file_handler.hpp */,
+				35DB7ADA25444F9300B3446A /* declaration.cpp */,
+				35DB7ADB25444F9300B3446A /* declaration.hpp */,
 			);
 			path = voca;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DB7ADC25444F9300B3446A /* declaration.cpp in Sources */,
+				35DB7AE0254461E800B3446A /* handler.cpp in Sources */,
+				35DB7AE42544640F00B3446A /* file_handler.cpp in Sources */,
 				35DB7AD22543780A00B3446A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +260,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8ZC3B6DWM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -252,6 +271,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8ZC3B6DWM;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
