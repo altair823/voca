@@ -21,7 +21,7 @@ std::fstream file_handler::file_open(){
         
         //단어장 파일이 존재하고 열린다면
         if(file.is_open()){
-            std::cout<<"vocabulary open successfully"<<std::endl;
+            std::cout<<"file open successfully"<<std::endl;
             break;
         }
         else{

@@ -9,5 +9,7 @@
 
 handler::handler(){
     file_handler file_voca;
-    
+    console_handler console_voca;
 }
+
+

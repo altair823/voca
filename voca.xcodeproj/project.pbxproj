@@ -11,6 +11,8 @@
 		35DB7ADC25444F9300B3446A /* declaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7ADA25444F9300B3446A /* declaration.cpp */; };
 		35DB7AE0254461E800B3446A /* handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7ADE254461E800B3446A /* handler.cpp */; };
 		35DB7AE42544640F00B3446A /* file_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7AE22544640F00B3446A /* file_handler.cpp */; };
+		35DB7AE92547F0BD00B3446A /* console_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7AE72547F0BD00B3446A /* console_handler.cpp */; };
+		35DB7AED2548B42C00B3446A /* data_structure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7AEB2548B42C00B3446A /* data_structure.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +36,10 @@
 		35DB7ADF254461E800B3446A /* handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = handler.hpp; sourceTree = "<group>"; };
 		35DB7AE22544640F00B3446A /* file_handler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_handler.cpp; sourceTree = "<group>"; };
 		35DB7AE32544640F00B3446A /* file_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = file_handler.hpp; sourceTree = "<group>"; };
+		35DB7AE72547F0BD00B3446A /* console_handler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = console_handler.cpp; sourceTree = "<group>"; };
+		35DB7AE82547F0BD00B3446A /* console_handler.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = console_handler.hpp; sourceTree = "<group>"; };
+		35DB7AEB2548B42C00B3446A /* data_structure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = data_structure.cpp; sourceTree = "<group>"; };
+		35DB7AEC2548B42C00B3446A /* data_structure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = data_structure.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,11 @@
 				35DB7AD12543780A00B3446A /* main.cpp */,
 				35DB7ADE254461E800B3446A /* handler.cpp */,
 				35DB7ADF254461E800B3446A /* handler.hpp */,
+				35DB7AEB2548B42C00B3446A /* data_structure.cpp */,
+				35DB7AEC2548B42C00B3446A /* data_structure.hpp */,
 				35DB7AE22544640F00B3446A /* file_handler.cpp */,
+				35DB7AE72547F0BD00B3446A /* console_handler.cpp */,
+				35DB7AE82547F0BD00B3446A /* console_handler.hpp */,
 				35DB7AE32544640F00B3446A /* file_handler.hpp */,
 				35DB7ADA25444F9300B3446A /* declaration.cpp */,
 				35DB7ADB25444F9300B3446A /* declaration.hpp */,
@@ -134,8 +144,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35DB7ADC25444F9300B3446A /* declaration.cpp in Sources */,
+				35DB7AED2548B42C00B3446A /* data_structure.cpp in Sources */,
 				35DB7AE0254461E800B3446A /* handler.cpp in Sources */,
 				35DB7AE42544640F00B3446A /* file_handler.cpp in Sources */,
+				35DB7AE92547F0BD00B3446A /* console_handler.cpp in Sources */,
 				35DB7AD22543780A00B3446A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
