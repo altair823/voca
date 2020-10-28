@@ -27,6 +27,9 @@ public:
     word(std::string eng_word_new, std::string kor_word_new1, std::string kor_word_new2);
     word(std::string eng_word_new, std::string kor_word_new1, std::string kor_word_new2, std::string kor_word_new3);
     
+    void set_eng_word(string eng_word_new);
+    void set_kor_word(string kor_word_new);
+    
     std::string put_eng_word();
     std::string put_kor_word(int word_type);
 };

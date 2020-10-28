@@ -12,8 +12,6 @@
 
 #include "declaration.hpp"
 
-using namespace std;
-
 class console_handler{
     
 public:

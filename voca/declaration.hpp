@@ -8,10 +8,13 @@
 #ifndef declaration_hpp
 #define declaration_hpp
 
-#define FILE_PATH "./desktop/voca_test.txt"
+#define FILE_PATH "./desktop/voca.txt"
 #define VERIFY "altair823's_vocabulary"
+#define WORD_LIST_MAX 1000000
 
 #include <stdio.h>
 #include <iostream>
+
+using namespace std;
 
 #endif /* declaration_hpp */

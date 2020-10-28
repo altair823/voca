@@ -12,5 +12,6 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     
     handler test_handler;
+    test_handler.read_voca_file();
     return 0;
 }

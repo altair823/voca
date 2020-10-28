@@ -16,7 +16,12 @@
 
 class handler{
     
-    word word_list[WORD_LIST_MAX];
+    int list_size;
+    word* word_list[WORD_LIST_MAX];
+    
+    file_handler file_voca;
+    
+    console_handler console_voca;
     
 public:
     handler();

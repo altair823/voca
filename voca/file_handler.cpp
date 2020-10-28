@@ -14,8 +14,8 @@ file_handler::file_handler(){
     verify_file();
 }
 
-std::fstream file_handler::file_open(){
-    std::fstream file;
+fstream file_handler::file_open(){
+    fstream file;
     while (true) {
         file.open(FILE_PATH);
         
@@ -46,4 +46,40 @@ void file_handler::verify_file(){
         std::cout<<"Invalid file content!"<<std::endl;
         exit(7);
     }
+}
+
+int file_handler::read_list_size(){
+    
+    std::string buffer;
+    std::getline(file_voca, buffer, ':');
+    
+    int size;
+    file_voca>>size;
+    //std::cout<<size<<std::endl;
+    return size;
+}
+
+word file_handler::read_a_word(){
+    
+    string buffer;
+    string eng_word;
+    string kor_word[3];
+    getline(file_voca, buffer, '<');
+    getline(file_voca, eng_word, '>');
+    
+    cout<<eng_word<<endl;
+    
+    
+    for (int i=0; i<3; i++) {
+        
+        getline(file_voca, buffer, '<');
+        getline(file_voca, buffer, '>');
+        
+        if (buffer != ""){
+            kor_word[i] = buffer;
+        }
+        cout<<kor_word[i]<<endl;
+    }
+    word temp_word(eng_word, kor_word[0], kor_word[1], kor_word[2]);
+    return temp_word;
 }

@@ -8,8 +8,10 @@
 #include "handler.hpp"
 
 handler::handler(){
-    file_handler file_voca;
-    console_handler console_voca;
 }
 
-
+void handler::read_voca_file(){
+    list_size = file_voca.read_list_size();
+    file_voca.read_a_word();
+    file_voca.read_a_word();
+}
