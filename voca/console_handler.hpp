@@ -10,6 +10,7 @@
 
 #include <iostream>
 
+#include "data_structure.hpp"
 #include "declaration.hpp"
 
 class console_handler{
@@ -19,6 +20,9 @@ public:
     
     //초기 선택 화면
     int choice_store_quiz();
+    
+    //단어 한 개를 출력하는 함수
+    void print_full_voca(word temp_word);
 };
 
 #endif /* console_handler_hpp */

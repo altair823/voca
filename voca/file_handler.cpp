@@ -67,8 +67,8 @@ word file_handler::read_a_word(){
     getline(file_voca, buffer, '<');
     getline(file_voca, eng_word, '>');
     
-    cout<<eng_word<<endl;
-    
+    //test
+    //cout<<eng_word<<endl;
     
     for (int i=0; i<3; i++) {
         
@@ -78,7 +78,9 @@ word file_handler::read_a_word(){
         if (buffer != ""){
             kor_word[i] = buffer;
         }
-        cout<<kor_word[i]<<endl;
+        
+        //test
+        //cout<<kor_word[i]<<endl;
     }
     word temp_word(eng_word, kor_word[0], kor_word[1], kor_word[2]);
     return temp_word;

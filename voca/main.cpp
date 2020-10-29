@@ -13,5 +13,6 @@ int main(int argc, const char * argv[]) {
     
     handler test_handler;
     test_handler.read_voca_file();
+    test_handler.print_voca();
     return 0;
 }

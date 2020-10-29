@@ -10,7 +10,7 @@
 console_handler::console_handler(){
     std::cout<<"<"<<VERIFY<<">"<<std::endl;
     
-    choice_store_quiz();
+    //choice_store_quiz();
 }
 
 int console_handler::choice_store_quiz(){
@@ -36,4 +36,8 @@ int console_handler::choice_store_quiz(){
         
     }
     
+}
+
+void console_handler::print_full_voca(word temp_word){
+    cout<<temp_word.put_eng_word()<<"   "<<temp_word.put_kor_word(0)<<endl;
 }

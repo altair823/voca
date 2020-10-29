@@ -28,6 +28,9 @@ public:
     
     //단어장 파일을 읽는 함수
     void read_voca_file();
+    
+    //단어장의 단어들을 모두 출력하는 함수
+    void print_full_voca();
 };
 
 #endif /* handler_hpp */
