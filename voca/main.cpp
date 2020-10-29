@@ -10,9 +10,23 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    handler handler_voca;
+    handler_voca.read_voca_file();
+    while (true) {
+        int choice = handler_voca.choice();
+        
+        if (choice == 1) {
+            //store vocabulary
+        }
+        else if (choice == 2){
+            //Quiz
+        }
+        else if (choice == 3){
+            //list all words
+            handler_voca.print_full_voca();
+        }
+    }
     
-    handler test_handler;
-    test_handler.read_voca_file();
-    test_handler.print_voca();
+    
     return 0;
 }

@@ -23,6 +23,9 @@ public:
     
     //단어 한 개를 출력하는 함수
     void print_full_voca(word temp_word);
+    
+    //단어를 입력받아 word형식으로 반환하는 함수
+    word input_word();
 };
 
 #endif /* console_handler_hpp */

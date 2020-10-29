@@ -29,8 +29,14 @@ public:
     //단어장 파일을 읽는 함수
     void read_voca_file();
     
+    //무엇을 할지 선택할 때 사용할 함수
+    int choice();
+    
     //단어장의 단어들을 모두 출력하는 함수
     void print_full_voca();
+    
+    //단어를 입력받아 저장하는 함수
+    void store_voca();
 };
 
 #endif /* handler_hpp */

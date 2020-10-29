@@ -17,7 +17,7 @@ int console_handler::choice_store_quiz(){
     
     while (true) {
         
-        cout<<"1. Store vocabulary  2. Quiz  3. List words  4. Exit"<<endl;
+        cout<<"1. Store vocabulary  2. Quiz  3. List words  0. Exit"<<endl;
         cout<<">>";
         int choice;
         cin>>choice;

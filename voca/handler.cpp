@@ -23,8 +23,16 @@ void handler::read_voca_file(){
     }
 }
 
+int handler::choice(){
+    return console_voca.choice_store_quiz();
+}
+
 void handler::print_full_voca(){
     for (int i=0; i<list_size; i++) {
         console_voca.print_full_voca(*word_list[i]);
     }
+}
+
+void handler::store_voca(){
+    
 }
