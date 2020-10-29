@@ -19,9 +19,12 @@ int main(int argc, const char * argv[]) {
             //store vocabulary
         }
         else if (choice == 2){
-            //Quiz
+            //delete word
         }
         else if (choice == 3){
+            //Quiz
+        }
+        else if (choice == 4){
             //list all words
             handler_voca.print_full_voca();
         }
