@@ -10,7 +10,7 @@
 
 #define FILE_PATH "./desktop/voca.txt"
 #define VERIFY "altair823's_vocabulary"
-#define WORD_LIST_MAX 1000000
+#define WORD_LIST_MAX 100
 
 #include <stdio.h>
 #include <iostream>

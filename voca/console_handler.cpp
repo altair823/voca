@@ -27,7 +27,7 @@ int console_handler::choice_store_quiz(){
         }
         else if (choice == 0){
             cout<<"Exit program"<<endl;
-            exit(0);
+            return choice;
         }
         else{
             cout<<"wrong input"<<endl;
@@ -39,15 +39,20 @@ int console_handler::choice_store_quiz(){
 }
 
 void console_handler::print_full_voca(word temp_word){
-    cout<<temp_word.put_eng_word()<<"   "<<temp_word.put_kor_word(0)<<endl;
+    cout<<temp_word.put_eng_word()<<"   "<<temp_word.put_kor_word()<<endl;
 }
 
+
 word console_handler::input_word(){
-    word input_word;
+    //word input_word;
+    cin.clear();
+    cin.ignore();
     cout<<"English word: ";
     string eng_word;
     getline(cin, eng_word);
     
+    cin.clear();
+    cin.ignore();
     cout<<"Korean mean(split with /): ";
     string kor_word;
     getline(cin, kor_word);
@@ -57,20 +62,25 @@ word console_handler::input_word(){
     strcpy(temp_c_str, kor_word.c_str());
     
     //입력받을 한국어 뜻을 저장할 문자열들
-    string kor_mean_list[2];
+    string temp_kor_mean_list[20];
     int kor_mean_list_size = 0;
     
     char* tok = strtok(temp_c_str, "/");
     while (tok != nullptr) {
-        kor_mean_list[kor_mean_list_size] = string(tok);
+        temp_kor_mean_list[kor_mean_list_size] = string(tok);
         tok = strtok(nullptr, "/");
         kor_mean_list_size++;
     }
     
     //분할한 한국어 뜻을 올바르게 저장
+    string* kor_mean_list;
+    kor_mean_list = new string[kor_mean_list_size];
     for (int i=0; i<kor_mean_list_size; i++) {
-        if (kor_mean_list[i] != ""){
-            
+        if (temp_kor_mean_list[i] != ""){
+            kor_mean_list[i] = temp_kor_mean_list[i];
         }
     }
+    word new_word(eng_word, kor_mean_list, kor_mean_list_size);
+    return new_word;
 }
+ 

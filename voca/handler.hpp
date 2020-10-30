@@ -16,7 +16,10 @@
 
 class handler{
     
+    //단어장의 단어 개수
     int list_size;
+    
+    //단어장의 단어 리스트
     word* word_list[WORD_LIST_MAX];
     
     file_handler file_voca;
@@ -37,6 +40,9 @@ public:
     
     //단어를 입력받아 저장하는 함수
     void store_voca();
+    
+    //파일을 저장하고 프로그램을 끝내는 함수
+    void end_program();
 };
 
 #endif /* handler_hpp */

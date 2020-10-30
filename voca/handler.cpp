@@ -17,9 +17,11 @@ void handler::read_voca_file(){
     
     //단어장의 단어들을 모두 읽고 저장
     for (int i=0; i<list_size; i++){
-        word_list[i] = new word;
-        *word_list[i] = file_voca.read_a_word();
-        //word_list[i]->print_test();
+        word_list[i] = new word(file_voca.read_a_word());
+        
+        //단어를 생성할 때는 되도록이면 빈 단어를 생성하지 않도록 한다. 
+        //*word_list[i] = file_voca.read_a_word();
+        
     }
 }
 
@@ -34,5 +36,16 @@ void handler::print_full_voca(){
 }
 
 void handler::store_voca(){
-    
+    word_list[list_size] = new word;
+    *word_list[list_size] = console_voca.input_word();
+    list_size++;
+    print_full_voca();
+}
+
+void handler::end_program(){
+    file_voca.store_initial(list_size);
+    for (int i=0; i<list_size; i++) {
+        file_voca.store_word(*word_list[i]);
+    }
+    exit(0);
 }

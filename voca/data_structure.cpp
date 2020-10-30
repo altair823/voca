@@ -7,89 +7,83 @@
 
 #include "data_structure.hpp"
 
+//만약 영어단어의 입력 없이 단어 인스턴스가 만들어지면 요류를 뱉음
 word::word(){
+    cout<<"there is no english word error!"<<endl;
     
-}
-word::word(std::string eng_word_new){
-    eng_word = eng_word_new;
-}
-word::word(std::string eng_word_new, std::string kor_word_new1){
-    eng_word = eng_word_new;
-    kor_word1 = kor_word_new1;
-}
-word::word(std::string eng_word_new, std::string kor_word_new1, std::string kor_word_new2){
-    eng_word = eng_word_new;
-    kor_word1 = kor_word_new1;
-    kor_word2 = kor_word_new2;
-}
-word::word(std::string eng_word_new, std::string kor_word_new1, std::string kor_word_new2, std::string kor_word_new3){
-    eng_word = eng_word_new;
-    kor_word1 = kor_word_new1;
-    kor_word2 = kor_word_new2;
-    kor_word3 = kor_word_new3;
+    //exit(8);
 }
 
-std::string word::put_eng_word(){
+//영어단어만이 입력되었고 뜻은 입력받지 못했을 때
+word::word(const std::string& eng_word_new){
+    eng_word = eng_word_new;
+    kor_word_count = 0;
+}
+
+//영어단어와 그 뜻을 입력받고 뜻의 개수를 입력받음
+//가장 선호해야할 생성자
+word::word(const std::string& eng_word_new, std::string* kor_word_new_list, int kor_word_count_new){
+    eng_word = eng_word_new;
+    kor_word = new string[kor_word_count_new];
+    for (int i=0; i<kor_word_count_new; i++) {
+        kor_word[i] = kor_word_new_list[i];
+    }
+    kor_word_count = kor_word_count_new;
+}
+
+word::~word(){
+    //delete kor_word;
+}
+
+word::word(const word& ref){
+    eng_word = ref.eng_word;
+    kor_word_count = ref.kor_word_count;
+    kor_word = new string[ref.kor_word_count];
+    for (int i=0; i<kor_word_count; i++) {
+        kor_word[i] = ref.kor_word[i];
+    }
+}
+
+const int word::put_kor_word_count(){
+    return kor_word_count;
+}
+
+std::string const word::put_eng_word(){
     return eng_word;
 }
 
-std::string word::put_kor_word(int word_type){
+const std::string word::put_kor_word_random(){
     
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<int> dis(1, 2);
+    uniform_int_distribution<int> dis(1, kor_word_count);
     dis(gen);
     
-    if (word_type == 0){
-        std::string kor_words;
-        if (kor_word2 != "" && kor_word3 == ""){
-            kor_words = kor_word1 + ", " + kor_word2;
-        }
-        else if (kor_word2 == "" && kor_word3 == ""){
-            kor_words = kor_word1;
-        }
-        else{
-            kor_words = kor_word1 + ", " + kor_word2 + ", " + kor_word3;
-        }
-        return kor_words;
-    }
+    int random_num = dis(gen);
     
-    //첫번째 뜻 반환
-    else if (word_type == 1){
-        return kor_word1;
-    }
-    //두번째 뜻 반환
-    else if (word_type == 2){
-        //두번째 뜻이 비어있다면 첫번째 뜻 반환
-        if (kor_word2 == ""){
-            return kor_word1;
+    return kor_word[random_num];
+}
+
+const std::string word::put_kor_word(){
+    std::string kor_words;
+    //cout<<kor_word_count<<endl;
+    for (int i=0; i<kor_word_count; i++) {
+        kor_words += kor_word[i];
+        if (i != kor_word_count-1) {
+            kor_words += ", ";
         }
-        return kor_word2;
     }
-    //세번째 뜻 반환
-    else if (word_type == 3){
-        //세번쨰 뜻이 비어있다면 무작위로 다른 뜻을 반환
-        if (kor_word3 == ""){
-            int random_num = dis(gen);
-            if (random_num == 2){
-                //무작위로 선택된 두번째 뜻이 비어있다면 첫번째 뜻 반환
-                if (kor_word2 == "") {
-                    return kor_word1;
-                }
-                return kor_word2;
-            }
-            else if (random_num == 1){
-                return kor_word1;
-            }
-        }
-        return kor_word3;
-    }
-    else{
-        std::cout<<"kor_word loading error!"<<std::endl;
-        exit(9);
-    }
+    return kor_words;
+}
+
+const std::string word::put_kor_word_index(int index){
+    return kor_word[index-1];
 }
 
 void word::print_test(){
-    cout<<eng_word<<" "<<kor_word1<<", "<<kor_word2<<", "<<kor_word3<<endl;
+    cout<<eng_word<<" ";
+    for (int i=0; i<kor_word_count; i++) {
+        cout<<kor_word[i]<<" ";
+    }
+    cout<<endl;
 }

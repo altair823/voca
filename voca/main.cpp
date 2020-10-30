@@ -17,6 +17,7 @@ int main(int argc, const char * argv[]) {
         
         if (choice == 1) {
             //store vocabulary
+            handler_voca.store_voca();
         }
         else if (choice == 2){
             //delete word
@@ -27,6 +28,14 @@ int main(int argc, const char * argv[]) {
         else if (choice == 4){
             //list all words
             handler_voca.print_full_voca();
+        }
+        else if (choice == 0){
+            //end program
+            handler_voca.end_program();
+        }
+        else{
+            cout<<"wrong input"<<endl;
+            continue;
         }
     }
     

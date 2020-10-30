@@ -9,6 +9,7 @@
 #define file_handler_hpp
 
 #include <fstream>
+#include <string.h>
 
 #include "data_structure.hpp"
 #include "declaration.hpp"
@@ -33,6 +34,15 @@ public:
     
     //파일을 읽어 단어를 반환하는 함수
     word read_a_word();
+    
+    //파일의 첫부분을 저장하는 함수
+    void store_initial(int list_size);
+    
+    //단어들을 파일에 저장하는 함수
+    void store_word(word a_word);
+    
+    //서명의 크기를 반환하는 함수
+    int verify_size();
 };
 
 #endif /* file_handler_hpp */
