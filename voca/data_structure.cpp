@@ -77,7 +77,7 @@ const std::string word::put_kor_word(){
 }
 
 const std::string word::put_kor_word_index(int index){
-    return kor_word[index-1];
+    return kor_word[index];
 }
 
 void word::print_test(){

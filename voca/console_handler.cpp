@@ -13,7 +13,7 @@ console_handler::console_handler(){
     //choice_store_quiz();
 }
 
-int console_handler::choice_store_quiz(){
+int console_handler::choice(){
     
     while (true) {
         
@@ -84,3 +84,6 @@ word console_handler::input_word(){
     return new_word;
 }
  
+string console_handler::input_eng_word(){
+    
+}

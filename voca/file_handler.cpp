@@ -29,8 +29,13 @@ fstream file_handler::file_open(){
             
             std::cout<<"make a new file"<<std::endl;
             
+            //파일에 필요한 내용을 저장한다. 
             std::ofstream make_temp_file(FILE_PATH);
             make_temp_file.write(VERIFY, strlen(VERIFY));
+            make_temp_file.write("\n", 1);
+            make_temp_file.write("list size: ", 11);
+            make_temp_file.write("0", 1);
+            make_temp_file.write("\n", 1);
             make_temp_file.close();
         }
         
@@ -130,5 +135,5 @@ void file_handler::store_word(word a_word){
         file_voca.write(a_word.put_kor_word_index(i).c_str(), a_word.put_kor_word_index(i).size());
         file_voca.write(">", 1);
     }
-    file_voca.write("\n", 1);
+    file_voca.write(" <n>\n", 5);
 }

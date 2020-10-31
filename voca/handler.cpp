@@ -26,7 +26,7 @@ void handler::read_voca_file(){
 }
 
 int handler::choice(){
-    return console_voca.choice_store_quiz();
+    return console_voca.choice();
 }
 
 void handler::print_full_voca(){
@@ -36,10 +36,15 @@ void handler::print_full_voca(){
 }
 
 void handler::store_voca(){
-    word_list[list_size] = new word;
-    *word_list[list_size] = console_voca.input_word();
+    //cout<<list_size<<endl;
+    word_list[list_size] = new word(console_voca.input_word());
+    //*word_list[list_size] = console_voca.input_word();
     list_size++;
     print_full_voca();
+}
+
+void handler::delete_voca(){
+    
 }
 
 void handler::end_program(){
