@@ -17,7 +17,7 @@ int console_handler::choice(){
     
     while (true) {
         
-        cout<<"1. Store vocabulary  2. Delete word  3. Quiz  4. List words  0. Exit"<<endl;
+        cout<<"1. Store vocabulary  2. Delete word  3. Quiz  4. List words  5. Exit"<<endl;
         cout<<">>";
         int choice;
         cin>>choice;
@@ -25,7 +25,7 @@ int console_handler::choice(){
         if (choice == 1 || choice == 2 || choice == 3 || choice == 4){
             return choice;
         }
-        else if (choice == 0){
+        else if (choice == 5){
             cout<<"Exit program"<<endl;
             return choice;
         }

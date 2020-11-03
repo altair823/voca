@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
             //list all words
             handler_voca.print_full_voca();
         }
-        else if (choice == 0){
+        else if (choice == 5){
             //end program
             handler_voca.end_program();
         }
