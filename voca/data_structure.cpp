@@ -30,10 +30,10 @@ word::word(const std::string& eng_word_new, std::string* kor_word_new_list, int 
     }
     kor_word_count = kor_word_count_new;
 }
-
+/*
 word::~word(){
-    //delete kor_word;
-}
+    delete kor_word;
+}*/
 
 word::word(const word& ref){
     eng_word = ref.eng_word;
@@ -48,7 +48,7 @@ const int word::put_kor_word_count(){
     return kor_word_count;
 }
 
-std::string const word::put_eng_word(){
+const std::string word::put_eng_word(){
     return eng_word;
 }
 

@@ -41,8 +41,11 @@ public:
     //단어를 입력받아 저장하는 함수
     void store_voca();
     
+    //단어를 목록에서 삭제하는 함수
+    void remove_from_word_list(int index);
+    
     //단어를 삭제하는 함수
-    void delete_voca();
+    bool delete_voca();
     
     //파일을 저장하고 프로그램을 끝내는 함수
     void end_program();

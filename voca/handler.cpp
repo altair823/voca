@@ -43,8 +43,31 @@ void handler::store_voca(){
     print_full_voca();
 }
 
-void handler::delete_voca(){
-    
+void handler::remove_from_word_list(int index){
+    for (int i=index; i<list_size-1; i++) {
+        delete word_list[i];
+        word_list[i] = new word(*word_list[i+1]);
+        
+    }
+    //cout<<list_size<<endl;
+    delete word_list[list_size-1];
+    list_size--;
+}
+
+bool handler::delete_voca(){
+    string eng_word = console_voca.input_eng_word();
+    for (int i=0; i<list_size; i++) {
+        //입력받은 영어 단어가 목록에 있다면
+        if (word_list[i]->put_eng_word() == eng_word) {
+            //해당 단어를 삭제
+            remove_from_word_list(i);
+            cout<<"delete word \""<<eng_word<<"\""<<endl;
+            return true;
+        }
+        //입력받은 단어가 목록에 없다면
+    }
+    cout<<"there is no \""<<eng_word<<"\""<<endl;
+    return false;
 }
 
 void handler::end_program(){

@@ -27,7 +27,7 @@ public:
     word();
     word(const std::string& eng_word_new);
     word(const std::string& eng_word_new, std::string* kor_word_new_list, int kor_word_count);
-    ~word();
+    //~word();
     
     word(const word& ref);
     
@@ -40,7 +40,7 @@ public:
     const int put_kor_word_count();
     
     //
-    std::string const put_eng_word();
+    const std::string put_eng_word();
     const std::string put_kor_word_random();
     const std::string put_kor_word();
     const std::string put_kor_word_index(int index);

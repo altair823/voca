@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
         }
         else if (choice == 2){
             //delete word
-            
+            handler_voca.delete_voca();
         }
         else if (choice == 3){
             //Quiz

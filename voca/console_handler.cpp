@@ -85,5 +85,12 @@ word console_handler::input_word(){
 }
  
 string console_handler::input_eng_word(){
+    cout<<"Please enter the word to be deleted."<<endl;
+    cout<<">> ";
+    string eng_word;
+    cin>>eng_word;
     
+    cin.clear();
+    cin.ignore();
+    return eng_word;
 }
